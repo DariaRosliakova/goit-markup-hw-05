@@ -131,11 +131,7 @@ img {
 }
 
 .header-link:hover,
-.header-link:focus,
-.contacts-phone:hover,
-.contacts-mail:hover,
-.contacts-phone:focus,
-.contacts-mail:focus {
+.header-link:focus {
     color: var(--accent-txt-cl);
 }
 
@@ -158,7 +154,8 @@ img {
 
 .contacts-phone,
 .contacts-mail {
-    display: block;
+    display: flex;
+    align-items: center;
     padding-top: 32px;
     padding-bottom: 31px;
     font-weight: 500;
@@ -166,21 +163,27 @@ img {
     line-height: calc(16 / 14);
     letter-spacing: 0.02em;
     color: var(--secondary-txt-cl);
-    transition: color var(--transition);
 }
-.contacts-item {
-    display: flex;
-    align-items: center;
-    
+.tel,
+.mail {
+    transition: color var(--transition)
 }
+
 .contacts-icon {
     margin-right: 10px;
     fill: var(--secondary-txt-cl);
     transition: fill var(--transition);
 }
-.contacts-item:hover .contacts-icon,
-.contacts-item:focus .contacts-icon {
+.contacts-mail:hover .contacts-icon,
+.contacts-mail:focus .contacts-icon,
+.contacts-mail:hover .mail,
+.contacts-mail:focus .mail,
+.contacts-phone:hover .contacts-icon,
+.contacts-phone:focus .contacts-icon,
+.contacts-phone:hover .tel,
+.contacts-phone:focus .tel {
     fill: var(--accent-txt-cl);
+    color: var(--accent-txt-cl);
 }
 
 /* Hero */
